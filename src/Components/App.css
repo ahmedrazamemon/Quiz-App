@@ -1,0 +1,90 @@
+/* Reset some default styles */
+body{
+  background-color: white;
+}
+.main{
+
+
+display: block;
+/* margin-left: auto; */
+/* margin-right: auto; */
+/* display: flex;
+  /* height: 400px; */
+}
+/* Basic styling for the quiz container */
+.quiz-container {
+  /* display: flex; */
+  /* height: 95vh; */
+  width: auto;
+  border: 1px solid;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the question */
+.question {
+
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Styling for answer options */
+.options {
+  display: flex;
+  text-align: center;
+  margin: 10px;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 400px; */
+}
+.opbtn{
+
+  width: 200px;
+  margin: 10px;
+}
+/* Radio button style */
+/* .option input[type="radio"] {
+} */
+
+/* Styling for the submit button */
+.opbtn {
+  /* margin-top: 15px; */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+}
+
+.opbtn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the score board */
+.score-board {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 10px;
+  }
+  
+  .question {
+    font-size: 1rem;
+  }
+}
