@@ -5,38 +5,39 @@ import { TextField, Button, Typography, Container } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 import Questions from './Questions'
 import "./login.css"
-// import { makeStyles } from '@mui/styles';
-// import FormControl from '@mui/material/FormControl';
-// import Select from '@mui/material/Select';
-// import MenuItem from '@mui/material/MenuItem'
-// import Select from '@mui/material/Select';
-// import MenuItem from '@mui/material/MenuItem';
-// import { MenuItem } from '@mui/base/MenuItem';
- 
 
 function Basic() {
-    
-  
-    // const [optionv,setoptionv]= useState("")
-    let navigate= useNavigate()
-  const  submitdata=()=>{
-        // console.log(value)
-        navigate("/Questions") 
-    
-    }
-  
+
+
+   
+    let navigate = useNavigate()
+    // const submitdata = () => {
+        
+        // navigate("/Questions",{replace:true})
+        // console.log(values)
+        // if(selectval==""){
+    //         // alert("select any")
+    //     if(selectval == 'GDVE'){
+    //         navigate('/Gdquestions')
+    //     }
+
+    //     // }
+    //     console.log(selectval)
+    //     navigate("/Questions")
+
+    // }
+
     // const data=()=> {
 
-            // navigate("/Questions",replace{true})
-        // }
-        // console.log(contactNumber)
-        // localStorage.setItem()
-    
+    // }
+    // console.log(contactNumber)
+    // localStorage.setItem()
+
     // const classes = useStyles();
     return (
         <>
             {/* <h1>Form</h1> */}
-            <Container  maxWidth="xs">
+            <Container maxWidth="xs">
                 <Typography variant="h4" align="center" gutterBottom>
                     <i>   Some Details <br /> About You </i>
                 </Typography>
@@ -50,7 +51,12 @@ function Basic() {
                         contactNumber: Yup.number().min(10, "Minimum 10 Numbers").required(),
                         // color:Yup.string().required()
                     })}
-                    
+                    onSubmit={(value)=>{
+                        console.log(value)
+                        // navigate("")
+        navigate("/Questions",{replace:true})
+
+                    }}
                 >
                     <Form style={{ textAlign: "center" }}>
                         {/* UserName */}
@@ -119,21 +125,15 @@ function Basic() {
                             <ErrorMessage name={"contactNumber"} />
                         </b>
                         <br />
-                        {/* <Field as="select"  onChange={(e)=>handlechg(e.target.value)}>
-                        <option disabled selected>Select Option</option>
+                        {/* <Field as="select" value={selectval} onChange={(e) => setselectval(e.target.value)}>
+                            <option disabled selected>Select Option</option>
                             <option value={"GDVE"}>Graphic Designing Video Editing</option>
                             <option value={"Web&App"}>Web & App Development</option>
                             <option value={"CCO"}>Certified Computer Operator</option> </Field> */}
-                        {/* <select name="" id=""  onChange={(e) => svalue(e.target.value)} style={{ padding: "10px", width: "auto" }}>
-                            {/* <option disabled selected>Select Option</option>
-                            <option value={"GDVE"}>Graphic Designing Video Editing</option>
-                            <option value={"Web&App"}>Web & App Development</option>
-                            <option value={"CCO"}>Certified Computer Operator</option>
-                        </select> */} 
-                        {/* <h1>{optionv}</h1> */}
+                     
                         <br />
 
-                        <Button type="submit" onClick={submitdata} variant="contained" color="primary" fullWidth >Submit</Button>
+                        <Button type="submit" variant="contained" color="primary" fullWidth >Submit</Button>
 
                     </Form>
 
