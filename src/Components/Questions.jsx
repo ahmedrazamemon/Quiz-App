@@ -83,7 +83,7 @@ function Questions() {
          {
             
          }
-           {score < 67 ? <><h2 style={{color:"red"}}> You loss ! <br /> The Score is  {score}</h2> <br /> Progress:<progress value={score}  max={100} ></progress>  </> : <><h2 style={{color:"green"}}>  Congaratulations.. <br />  Your score is {score} </h2>  <br />Progress: <progress value={score}  max={100}> </progress> </>} 
+           {score < 67 ? <><h2 style={{color:"red"}}> You lose ! <br /> The Score is  {score}</h2> <br /> Progress:<progress value={score}  max={100} ></progress>  </> : <><h2 style={{color:"green"}}>  Congratulations.. <br />  Your score is {score} </h2>  <br />Progress: <progress value={score}  max={100}> </progress> </>} 
             </h2>
         </div>
       ) : (
