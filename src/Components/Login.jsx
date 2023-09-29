@@ -42,10 +42,10 @@ function Basic() {
                     <i>   Some Details <br /> About You </i>
                 </Typography>
                 <Formik
-                    initialValues={{ username: "", email: "", FatherName: "", Age: "" }} //inital value start 
+                    initialValues={{ Yourname: "", email: "", FatherName: "", Age: "" }} //inital value start 
 
                     validationSchema={Yup.object({
-                        username: Yup.string().min(3, "Minimum 3 Letters").required(),
+                        Yourname: Yup.string().min(3, "Minimum 3 Letters").required(),
                         FatherName: Yup.string().min(3, "Minimum 3 Letters").required(),
                         email: Yup.string().email("Invalid email address").required(),
                         Age: Yup.number().min(2, "Minimum 10 Numbers").required(),
@@ -60,7 +60,7 @@ function Basic() {
                 >
                     <Form style={{ textAlign: "center" }}>
                         {/* UserName */}
-                        <Field name={"username"}
+                        <Field name={"Yourname"}
                             as={TextField}
                             label="Enter Your Name"
                             //  name="password"
@@ -72,7 +72,7 @@ function Basic() {
                         {/* <br/> */}
                         <b style={{ color: "red", fontWeight: "lighter" }}>
 
-                            <ErrorMessage name={"username"} />
+                            <ErrorMessage name={"Yourname"} />
                         </b>
                         <br />
                         {/* FatherName */}
@@ -112,7 +112,7 @@ function Basic() {
                         <Field name={"Age"}
                             // name={"username"}
                             as={TextField}
-                            label="Conatct No"
+                            label="Age"
                             //  name="password"
                             type="number"
                             variant="outlined"
