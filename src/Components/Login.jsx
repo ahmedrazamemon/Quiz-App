@@ -42,13 +42,13 @@ function Basic() {
                     <i>   Some Details <br /> About You </i>
                 </Typography>
                 <Formik
-                    initialValues={{ username: "", email: "", FatherName: "", contactNumber: "" }} //inital value start 
+                    initialValues={{ username: "", email: "", FatherName: "", Age: "" }} //inital value start 
 
                     validationSchema={Yup.object({
                         username: Yup.string().min(3, "Minimum 3 Letters").required(),
                         FatherName: Yup.string().min(3, "Minimum 3 Letters").required(),
                         email: Yup.string().email("Invalid email address").required(),
-                        contactNumber: Yup.number().min(10, "Minimum 10 Numbers").required(),
+                        Age: Yup.number().min(2, "Minimum 10 Numbers").required(),
                         // color:Yup.string().required()
                     })}
                     onSubmit={(value)=>{
@@ -109,7 +109,7 @@ function Basic() {
                             <ErrorMessage name={"email"} />
                         </b>
                         <br />
-                        <Field name={"contactNumber"}
+                        <Field name={"Age"}
                             // name={"username"}
                             as={TextField}
                             label="Conatct No"
@@ -122,7 +122,7 @@ function Basic() {
                         <br />
                         <b style={{ color: "red", fontWeight: "lighter" }}>
 
-                            <ErrorMessage name={"contactNumber"} />
+                            <ErrorMessage name={"Age"} />
                         </b>
                         <br />
                         {/* <Field as="select" value={selectval} onChange={(e) => setselectval(e.target.value)}>
